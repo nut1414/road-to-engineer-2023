@@ -21,3 +21,6 @@ VITE_PORT=5000
 yarn dev
 ```
 
+## 📝 Contributing
+
+To start contributing, create a branch for feature or fix **(for example `feat(some-feature)` or  `fix(some-bug)`)** then make a PR.
