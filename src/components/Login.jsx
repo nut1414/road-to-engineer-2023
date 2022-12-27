@@ -4,7 +4,7 @@ import { Email } from './input/EmailInput';
 import { Password } from './input/PasswordInput';
 import { Checkbox } from './input/CheckboxInput';
 import { Button } from "./input/Button";
-import { Dropdown } from "./input/DropdownInput";
+
 
 
 export const Login = () => {
@@ -29,7 +29,7 @@ export const Login = () => {
                   <Email />
                   <Password />
                   <Checkbox />
-                  <Dropdown></Dropdown>
+
                   <Button text="LOGIN" type="1" />
                   <span className="w-full flex justify-end text-lg text-decorate-100">
                     <a href="#" className="hover:text-juicy-100/75">Forgot password ?</a>
