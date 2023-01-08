@@ -8,6 +8,8 @@ import ElementTablet from './ElementTablet'
 import ElementMobile from "./ElementMobile";
 import Car from "./Car";
 import BTNToTheTop from "./BTNToTheTop";
+import { useNavigate } from "react-router-dom";
+
 
 gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
 
@@ -38,6 +40,7 @@ export default function useWindowDimensions() {
 }
 
 export const Timeline = () => {
+  const navigate = useNavigate();
   const { height, width } = useWindowDimensions();
   let varMaringin = width >= 1280 ? Math.min((((width-1280)/148)*55)+170, 225): width >= 768 ? Math.min(((width-768)/62)*20+120,165) : width > 0 ? Math.min(((width-360)/30)*35+90,125) : 0
   let varPadding = width >= 1280 ? Math.min((((width-1280)/148)*3)+11, 14): width >= 768 ? Math.min(((width-768)/62)*2+23, 25) : width > 0 ? Math.min(((width-360)/30)*2+10,12) : 0
@@ -346,32 +349,32 @@ export const Timeline = () => {
                   <h2 id="header" className="text-bloodred-200 text-[48px] md:text-7xl xl:text-8xl font-bold">Open House</h2>
                 </div>
                 <hr id="divider" className="mt-0.5 mb-3.5 border-t-[6px] border-bloodred-100 w-20 md:w-40 xl:w-80"/>
-                <p id="detail" className="text-2xl md:text-3xl xl:text-4xl mb-2.5 max-w-[292px] md:max-w-md xl:max-w-xl">มะนาวต่างดุ๊ด มนุษย์ต่างดาว คุณยายกินลำไย น้ำลายยายไหลย้อย หย่อนยาน ชามเขียวคว่ำเช้า ชามขาวคว่ำค่ำ ทหารบกแบกปืนเบิกปูนไป โบกตึก เช้าฟาดผัดฟัก เย็นฟาดฟักผัด </p>
-                <button id="button" className="translate-x-16 md:translate-x-32 xl:translate-x-0 shadow-[inset_5px_5px_5px_0_rgba(0,0,0,0.4)] border-[5.5px] md:border-[8px] xl:border-[12px] border-bloodred-200 font-bold rounded-full px-4 md:px-8 xl:px-16 text-[28px] md:text-[32px] xl:text-[40px] text-bloodred-200 bg-white">Open House</button>
+                <p id="detail" className="text-2xl md:text-3xl xl:text-4xl mb-2.5 max-w-[292px] md:max-w-md xl:max-w-xl">กิจกรรมที่เปิดให้นักเรียน คุณครู และผู้ปกครอง สัมผัสบรรยากาศ รับรู้ถึงสิ่งอำนวยความสะดวก ของคณะฯ และทำกิจกรรมร่วมกันกับนักศึกษาใน ภาควิชาต่าง ๆ</p>
+                <button id="button" className="translate-x-16 md:translate-x-32 xl:translate-x-0 shadow-[inset_5px_5px_5px_0_rgba(0,0,0,0.4)] border-[5.5px] md:border-[8px] xl:border-[12px] border-bloodred-200 font-bold rounded-full px-4 md:px-8 xl:px-16 text-[28px] md:text-[32px] xl:text-[40px] text-bloodred-200 bg-white" onClick={()=>{navigate('')}}>Open House</button>
               </section>
-              <section id="section" className="flex-1 font-DB-Heavent" style={`margin-bottom: ${varMaringin}px`}>
+              <section id="section" className="flex-1 font-DB-Heavent" style={`margin-bottom: ${varMaringin+40}px`}>
                 <div id="wrapper" className="overflow-hidden relative">
                   <h2 id="header" className="text-bloodred-200 text-[48px] md:text-7xl xl:text-8xl font-bold">การแข่งขันนวัตกรรม</h2>
                 </div>
                 <hr id="divider" className="mt-0.5 mb-3.5 border-t-[6px] border-bloodred-100 w-20 md:w-40 xl:w-80"/>
-                <p id="detail" className="text-2xl md:text-3xl xl:text-4xl mb-2.5 max-w-[292px] md:max-w-md xl:max-w-xl">Engineering, KMUTT Science & Technology Idea Contest การแข่งขันนวัตกรรม สิ่งประดิษฐ์ ทางด้านวิทยาศาสตร์ และเทคโนโลยี ระดับชั้นมัธยมศึกษาตอนปลาย หรือเทียบเท่า </p>
-                <button id="button" className="translate-x-16 md:translate-x-32 xl:translate-x-80 shadow-[inset_5px_5px_5px_0_rgba(0,0,0,0.4)] border-[5.5px] md:border-[8px] xl:border-[12px] border-bloodred-200 font-bold rounded-full px-4 md:px-8 xl:px-16 text-[28px] md:text-[32px] xl:text-[40px] text-bloodred-200 bg-white">Learn More</button>
+                <p id="detail" className="text-2xl md:text-3xl xl:text-4xl mb-2.5 max-w-[292px] md:max-w-md xl:max-w-xl">การแข่งขันเพื่อสนับสนุนการสร้างสรรค์และ ส่งเสริมการพัฒนาสิ่งประดิษฐ์ หรือผลงานวิจัย เชิงประยุกต์ทางด้านวิทยาศาสตร์ และเทคโนโลยี ที่ตอบสนองการใช้งานได้จริง !</p>
+                <button id="button" className="translate-x-16 md:translate-x-32 xl:translate-x-80 shadow-[inset_5px_5px_5px_0_rgba(0,0,0,0.4)] border-[5.5px] md:border-[8px] xl:border-[12px] border-bloodred-200 font-bold rounded-full px-4 md:px-8 xl:px-16 text-[28px] md:text-[32px] xl:text-[40px] text-bloodred-200 bg-white" onClick={()=>{window.location.href = 'https://www.facebook.com/profile.php?id=100087709743668'}}>Learn More</button>
               </section>
               <section id="section" className="flex-1 font-DB-Heavent" style={`margin-bottom: ${varMaringin}px`}>
                 <div id="wrapper" className="overflow-hidden relative">
                   <h2 id="header" className="text-bloodred-200 text-[38px] md:text-7xl xl:text-8xl font-bold whitespace-nowrap">การแข่งขันตอบปัญหาวิชาการ</h2>
                 </div>
                 <hr id="divider" className="mt-0.5 mb-3.5 border-t-[6px] border-bloodred-100 w-20 md:w-40 xl:w-80"/>
-                <p id="detail" className="text-2xl md:text-3xl xl:text-4xl mb-2.5 max-w-[292px] md:max-w-md xl:max-w-xl">มะนาวต่างดุ๊ด มนุษย์ต่างดาว คุณยายกินลำไย น้ำลายยายไหลย้อย หย่อนยาน ชามเขียวคว่ำเช้า ชามขาวคว่ำค่ำ ทหารบกแบกปืนเบิกปูนไป โบกตึก เช้าฟาดผัดฟัก เย็นฟาดฟักผัด </p>
-                <button id="button" className="translate-x-16 md:translate-x-32 xl:translate-x-0 shadow-[inset_5px_5px_5px_0_rgba(0,0,0,0.4)] border-[5.5px] md:border-[8px] xl:border-[12px] border-bloodred-200 font-bold rounded-full px-4 md:px-8 xl:px-16 text-[28px] md:text-[32px] xl:text-[40px] text-bloodred-200 bg-white">Learn More</button>
+                <p id="detail" className="text-2xl md:text-3xl xl:text-4xl mb-2.5 max-w-[292px] md:max-w-md xl:max-w-xl">การแข่งขันที่ทดสอบความรู้ความสามารถทางด้านวิศวกรรมศาสตร์ วิทยาศาสตร์ และเทคโนโลยี ให้เกิดทักษะและตระหนักถึงองค์ความรู้ที่สามารถ นำไปใช้ให้เกิดประโยชน์ต่อไปได้ !</p>
+                <button id="button" className="translate-x-16 md:translate-x-32 xl:translate-x-0 shadow-[inset_5px_5px_5px_0_rgba(0,0,0,0.4)] border-[5.5px] md:border-[8px] xl:border-[12px] border-bloodred-200 font-bold rounded-full px-4 md:px-8 xl:px-16 text-[28px] md:text-[32px] xl:text-[40px] text-bloodred-200 bg-white" onClick={()=>{window.location.href = 'https://www.facebook.com/profile.php?id=100087709743668'}}>Learn More</button>
               </section>
               <section id="section" className="flex-1 font-DB-Heavent">
                 <div id="wrapper" className="overflow-hidden relative">
                   <h2 id="header" className="text-bloodred-200 text-[48px] md:text-7xl xl:text-8xl font-bold">Bangmod Hackathon</h2>
                 </div>
                 <hr id="divider" className="mt-0.5 mb-3.5 border-t-[6px] border-bloodred-100 w-20 md:w-40 xl:w-80"/>
-                <p id="detail" className="text-2xl md:text-3xl xl:text-4xl mb-2.5 max-w-[292px] md:max-w-md xl:max-w-xl">มะนาวต่างดุ๊ด มนุษย์ต่างดาว คุณยายกินลำไย น้ำลายยายไหลย้อย หย่อนยาน ชามเขียวคว่ำเช้า ชามขาวคว่ำค่ำ ทหารบกแบกปืนเบิกปูนไป โบกตึก เช้าฟาดผัดฟัก เย็นฟาดฟักผัด </p>
-                <button id="button" className="translate-x-16 md:translate-x-32 xl:translate-x-80 shadow-[inset_5px_5px_5px_0_rgba(0,0,0,0.4)] border-[5.5px] md:border-[8px] xl:border-[12px] border-bloodred-200 font-bold rounded-full px-4 md:px-8 xl:px-16 text-[28px] md:text-[32px] xl:text-[40px] text-bloodred-200 bg-white">Hackathon</button>
+                <p id="detail" className="text-2xl md:text-3xl xl:text-4xl mb-2.5 max-w-[292px] md:max-w-md xl:max-w-xl">การแข่งขันเพื่อสนับสนุนการแก้ไขปัญหาด้วยการ เขียนโปรแกรมทางคอมพิวเตอร์ผ่านภาษาซี และ ส่งเสริมให้ได้มีโอกาสพัฒนาศักยภาพ การคิด วิเคราะห์ และการลงมือทำจริง !</p>
+                <button id="button" className="translate-x-16 md:translate-x-32 xl:translate-x-80 shadow-[inset_5px_5px_5px_0_rgba(0,0,0,0.4)] border-[5.5px] md:border-[8px] xl:border-[12px] border-bloodred-200 font-bold rounded-full px-4 md:px-8 xl:px-16 text-[28px] md:text-[32px] xl:text-[40px] text-bloodred-200 bg-white" onClick={()=>{window.location.href = 'https://www.facebook.com/BangmodHackathon'}}>Hackathon</button>
               </section>
             </div>
         </div>
