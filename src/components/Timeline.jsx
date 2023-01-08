@@ -10,7 +10,6 @@ import Car from "./Car";
 import BTNToTheTop from "./BTNToTheTop";
 import { useNavigate } from "react-router-dom";
 
-
 gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
 
 
@@ -279,6 +278,7 @@ export const Timeline = () => {
           duration: 1,
           opacity: 0,
         })
+
         gsap.to("#car", {
           scrollTrigger: {
             trigger: "#motionPathTablet",
@@ -353,12 +353,14 @@ export const Timeline = () => {
                 <button id="button" className="translate-x-16 md:translate-x-32 xl:translate-x-0 shadow-[inset_5px_5px_5px_0_rgba(0,0,0,0.4)] border-[5.5px] md:border-[8px] xl:border-[12px] border-bloodred-200 font-bold rounded-full px-4 md:px-8 xl:px-16 text-[28px] md:text-[32px] xl:text-[40px] text-bloodred-200 bg-white" onClick={()=>{navigate('')}}>Open House</button>
               </section>
               <section id="section" className="flex-1 font-DB-Heavent" style={`margin-bottom: ${varMaringin+40}px`}>
+
                 <div id="wrapper" className="overflow-hidden relative">
                   <h2 id="header" className="text-bloodred-200 text-[48px] md:text-7xl xl:text-8xl font-bold">การแข่งขันนวัตกรรม</h2>
                 </div>
                 <hr id="divider" className="mt-0.5 mb-3.5 border-t-[6px] border-bloodred-100 w-20 md:w-40 xl:w-80"/>
                 <p id="detail" className="text-2xl md:text-3xl xl:text-4xl mb-2.5 max-w-[292px] md:max-w-md xl:max-w-xl">การแข่งขันเพื่อสนับสนุนการสร้างสรรค์และ ส่งเสริมการพัฒนาสิ่งประดิษฐ์ หรือผลงานวิจัย เชิงประยุกต์ทางด้านวิทยาศาสตร์ และเทคโนโลยี ที่ตอบสนองการใช้งานได้จริง !</p>
                 <button id="button" className="translate-x-16 md:translate-x-32 xl:translate-x-80 shadow-[inset_5px_5px_5px_0_rgba(0,0,0,0.4)] border-[5.5px] md:border-[8px] xl:border-[12px] border-bloodred-200 font-bold rounded-full px-4 md:px-8 xl:px-16 text-[28px] md:text-[32px] xl:text-[40px] text-bloodred-200 bg-white" onClick={()=>{window.location.href = 'https://www.facebook.com/profile.php?id=100087709743668'}}>Learn More</button>
+
               </section>
               <section id="section" className="flex-1 font-DB-Heavent" style={`margin-bottom: ${varMaringin}px`}>
                 <div id="wrapper" className="overflow-hidden relative">
@@ -367,6 +369,7 @@ export const Timeline = () => {
                 <hr id="divider" className="mt-0.5 mb-3.5 border-t-[6px] border-bloodred-100 w-20 md:w-40 xl:w-80"/>
                 <p id="detail" className="text-2xl md:text-3xl xl:text-4xl mb-2.5 max-w-[292px] md:max-w-md xl:max-w-xl">การแข่งขันที่ทดสอบความรู้ความสามารถทางด้านวิศวกรรมศาสตร์ วิทยาศาสตร์ และเทคโนโลยี ให้เกิดทักษะและตระหนักถึงองค์ความรู้ที่สามารถ นำไปใช้ให้เกิดประโยชน์ต่อไปได้ !</p>
                 <button id="button" className="translate-x-16 md:translate-x-32 xl:translate-x-0 shadow-[inset_5px_5px_5px_0_rgba(0,0,0,0.4)] border-[5.5px] md:border-[8px] xl:border-[12px] border-bloodred-200 font-bold rounded-full px-4 md:px-8 xl:px-16 text-[28px] md:text-[32px] xl:text-[40px] text-bloodred-200 bg-white" onClick={()=>{window.location.href = 'https://www.facebook.com/profile.php?id=100087709743668'}}>Learn More</button>
+
               </section>
               <section id="section" className="flex-1 font-DB-Heavent">
                 <div id="wrapper" className="overflow-hidden relative">
