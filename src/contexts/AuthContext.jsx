@@ -38,7 +38,7 @@ export const AuthProvider = ({ children }) => {
           setUser(null);
           setStatus("unauthenticated")
         }
-    }).catch(() => {
+    }).catch((error) => {
       navigate('/')
     });
 
