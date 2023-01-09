@@ -24,11 +24,11 @@ export const Hero = () => {
           src={openHouse}
           className="object-contain md:w-1/2 sm:w-3/4 p-4 pt-32 sm:pt-24 md:pt-18  z-0"
         />
-        <div className="relative flex justify-center  text-center">
+        <div className="relative flex justify-center text-center tracking-wider">
           <div className="top-2 left-50% flex flex-col items-center">
             <p className="pt-8 text-juicy-300 text-xl md:text-3xl font-bold top-1">
               การเดินทางครั้งใหม่สู่รั้วบางมด <br /> ยินดีต้อนรับทุกคนเข้าสู่
-              engineering open house 2023
+              Engineering Open House 2023
             </p>
             <div className="pt-4">
               <h1 className=" text-white text-5xl md:text-7xl font-semibold ">
