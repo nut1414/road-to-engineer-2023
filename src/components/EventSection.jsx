@@ -1,6 +1,8 @@
 import { useLayoutEffect } from "preact/hooks";
 import gsap from 'gsap'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import useWindowDimensions from "./Timeline";
+
 gsap.registerPlugin(ScrollTrigger);
 const leftElement = [37, 39, 41, 5, 43, 31, 27, 0, 3, 23, 17, 19, 21, 45, 46]
 const lengthLeftElement = [60, 140, 30, 50, 30, 130, 80, 20, 130, 15, 40, 20, 70, 20, 80]
@@ -9,6 +11,7 @@ const lengthRightElement = [20, 60, 30, 100, 80, 20, 80]
 const location = ["RC", "PE_MCE", "CE", "ME", "EE", "TME", "CPE", "CHE", "ENE", "ENV", "INC"]
 
 export const EventSection = () => {
+    const { width } = useWindowDimensions()
     useLayoutEffect(() => {
         location.forEach(id=>{
             let element = `#${id}_location`
@@ -71,7 +74,7 @@ export const EventSection = () => {
     }, [])
   return (
     <section className="bg-black flex justify-center h-fit">
-        <svg viewBox="0 0 1440 2679"  fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg viewBox="0 0 1440 2679" width={width} fill="none" xmlns="http://www.w3.org/2000/svg">
         <g id="Event" clip-path="url(#clip0_821_29)">
         <g id="Road">
         <g id="road">
