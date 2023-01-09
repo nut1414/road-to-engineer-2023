@@ -19,11 +19,6 @@ export const RegisterPage = () => {
         {false ? <Consent setConsent={setConsent} /> : <BasicRegister />}
       </div>
 
-      {/*-- /#success --*/}
-      <div id="success">
-        <SuccessCard />
-      </div>
-
       <div>
         <Help />
       </div>

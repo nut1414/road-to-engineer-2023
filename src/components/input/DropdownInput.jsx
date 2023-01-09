@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'preact/hooks'
 
-export const Dropdown = ({ name, label, option, onChange, input, setInput }) => {
+export const Dropdown = ({ name, label, option, onChange, input, setInput, value }) => {
   const inner_option = Object.values(option);
   const value_option = Object.keys(option);
-  const [optionsState, setOption] = useState(null);
+  const [optionsState, setOption] = useState(value);
 
   return (
 
@@ -34,7 +34,7 @@ export const Dropdown = ({ name, label, option, onChange, input, setInput }) => 
         >
           <option hidden value="">  </option>
           {inner_option.map((e, i) => {
-            return <option value={value_option[i]} className="rounded rounded-lg w-2">{e}</option>
+            return <option value={value_option[i]} className="rounded rounded-lg w-2" selected={value_option[i] && optionsState}>{e}</option>
           })}
         </select>
       </div>
