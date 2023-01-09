@@ -4,13 +4,13 @@ import { RegisterPage } from './pages/RegisterPage';
 import { AnnouncementPage } from './pages/AnnouncementPage';
 import { OpenHousePage } from './pages/OpenHousePage';
 import { AuthProvider } from './contexts/AuthContext';
-import { BrowserRouter, Navigate, Route, Routes, HashRouter } from 'react-router-dom';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import './assets/css/app.css';
 
 export const App = () => {
   return (
     <>
-    <BrowserRouter baseline="/">
+    <BrowserRouter>
       <AuthProvider>
         <Routes>
           <Route path="/" element={<FrontPage/>} />
@@ -23,6 +23,7 @@ export const App = () => {
         </Routes>
       </AuthProvider>
     </BrowserRouter>
+
     </>
   );
 }
