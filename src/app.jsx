@@ -10,7 +10,7 @@ import './assets/css/app.css';
 export const App = () => {
   return (
     <>
-    <BrowserRouter>
+    <BrowserRouter basename="/">
       <AuthProvider>
         <Routes>
           <Route path="/" element={<FrontPage/>} />
