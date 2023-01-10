@@ -19,11 +19,13 @@ jobs:
         run: yarn install --frozen-lockfile
 
       - name: Create .env file
-        run: |
-          echo "${{ secrets.ENV_FILE }}" > .env
+        run: echo "${{ secrets.ENV_FILE }}" > .env
 
       - name: Build
         run: yarn build
+
+      - name: Copy custom 404 router
+        run: cp ./404.html ./dist/
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
