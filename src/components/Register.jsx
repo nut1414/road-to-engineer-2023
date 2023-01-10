@@ -159,7 +159,7 @@ export const BasicRegister = () => {
                 </div>
               </div>
               <div>
-                <h2 className="text-xl">ประเภทผู้ใช้งาน</h2>
+                <h2 className="text-xl">ประเภทผู้ใช้งาน <span className='text-bloodred-100'>*</span></h2>
                 <div className="grid grid-cols-2 md:grid-cols-4" onChange={(e) => {
                   e.target.value == "Student" ? setIsStudent(1) : setIsStudent(null);
                   const e_account = {

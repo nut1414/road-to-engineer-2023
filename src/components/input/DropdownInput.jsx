@@ -9,15 +9,17 @@ export const Dropdown = ({ name, label, option, onChange, input, setInput, value
 
     <>
       <div className="w-full z-20">
-        <label htmlFor="dropdown" className="flex flex-col text-xl">
-          {label}
+        <label htmlFor="dropdown" className="flex text-xl">
+          <span>
+            {label} <span className='text-bloodred-100'>*</span>
+          </span>
         </label>
         <select
           name={name} id={name}
           onChange={(e) => {
             setOption(e.target.value);
             onChange && onChange(e);
-            input && setInput({...input, [name]: e.target.value});
+            input && setInput({ ...input, [name]: e.target.value });
           }}
           value={optionsState}
           className="              
