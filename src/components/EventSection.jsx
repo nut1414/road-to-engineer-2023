@@ -58,7 +58,7 @@ export const EventSection = () => {
 
   return (
     <section className='bg-black flex justify-center'>
-        <svg width="1440" height="2679" viewBox="0 0 1440 2679" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width={window.innerWidth} viewBox="0 0 1440 2679" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g id="Event" clip-path="url(#clip0_821_29)">
         <g id="Road">
         <g id="road">
