@@ -39,7 +39,7 @@ export const OpenHouseFooter = () => {
   return (
     <>
       <img src={triangle} alt="triangle" className="object-fill w-screen h-16"/>
-      <div className="relative h-full w-full flex flex-col overflow-hidden bg-black -z-10">
+      <div className="relative h-full w-full flex flex-col overflow-hidden bg-black z-40">
         <div className="z-50 min-h-[8rem] bg-gradient-to-b">
           <div className="flex flex-row justify-center space-x-4 mt-10">
           <img src={kmuttalllogo} alt="kmuttlogo" className="h-20" />
