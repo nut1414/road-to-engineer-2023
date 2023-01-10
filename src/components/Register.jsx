@@ -48,9 +48,9 @@ export const BasicRegister = () => {
 
   const accType = {
     students: "นักเรียน/นักศึกษา",
-    Parent: "ผู้ปกครอง",
-    Teacher: "ครู-อาจารย์",
-    Other: "บุคคลทั่วไป",
+    parent: "ผู้ปกครอง",
+    teacher: "ครู-อาจารย์",
+    other: "บุคคลทั่วไป",
   }
 
   const navigate = useNavigate();
