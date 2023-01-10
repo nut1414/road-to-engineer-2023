@@ -162,7 +162,7 @@ export const BasicRegister = () => {
               <div>
                 <h2 className="text-xl">ประเภทผู้ใช้งาน <span className='text-bloodred-100'>*</span></h2>
                 <div className="grid grid-cols-2 md:grid-cols-4" onChange={(e) => {
-                  e.target.value == "Student" ? setIsStudent(1) : setIsStudent(null);
+                  e.target.value == "students" ? setIsStudent(1) : setIsStudent(null);
                   const e_account = {
                     target: {
                       id: e.target.name,
