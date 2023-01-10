@@ -1,4 +1,5 @@
 import { EventCard } from "../Another/EventCard";
+import { Link } from "react-router-dom";
 
 export const Gmap = () => {
   return (
@@ -7,10 +8,12 @@ export const Gmap = () => {
         {/* Image Map */}
         <div className="flex flex-col justify-center items-center gap-y-4 md:flex-row md:gap-6">
           <div className="md:w-1/2">
-            <EventCard
-              title="แผนที่มหาวิทยาลัย"
-              image="/image/kmutt-map.jpeg"
-            />
+            <a href="https://bgm.kmutt.ac.th/MapNavi/MAPNAVI.html">
+              <EventCard
+                title="แผนที่มหาวิทยาลัย"
+                image="/image/kmutt-map.jpeg"
+              />
+            </a>
           </div>
           <div className="md:w-1/2">
             <EventCard
