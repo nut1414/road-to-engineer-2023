@@ -45,7 +45,7 @@ export const allSchedules = [
       {
         department: 'วิศวกรรมคอมพิวเตอร์ (CPE)',
         rounds: ['10.00 - 11.00 น.', '13.00 - 14.00 น.', '15.00 - 16.00 น.'],
-        link: 'https://kmutt.me/cpeworkshop'
+        link: 'https://forms.office.com/r/sTcsmS0mxF'
       },
       {
         department: 'วิศวกรรมเครื่องมือและระบบควบคุม (INC)',
@@ -105,7 +105,7 @@ export const allSchedules = [
       {
         department: 'วิศวกรรมคอมพิวเตอร์ (CPE)',
         rounds: ['10.00 - 11.00 น.', '13.00 - 14.00 น.', '15.00 - 16.00 น.'],
-        link: 'https://kmutt.me/cpeworkshop'
+        link: 'https://forms.office.com/r/sTcsmS0mxF'
       },
       {
         department: 'วิศวกรรมเครื่องมือและระบบควบคุม (INC)',
@@ -165,7 +165,7 @@ export const allSchedules = [
       {
         department: 'วิศวกรรมคอมพิวเตอร์ (CPE)',
         rounds: ['10.00 - 11.00 น.', '13.00 - 14.00 น.', '15.00 - 16.00 น.'],
-        link: 'https://kmutt.me/cpeworkshop'
+        link: 'https://forms.office.com/r/sTcsmS0mxF'
       },
       {
         department: 'วิศวกรรมเครื่องมือและระบบควบคุม (INC)',
