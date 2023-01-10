@@ -47,7 +47,7 @@ export const BasicRegister = () => {
   });
 
   const accType = {
-    Student: "นักเรียน/นักศึกษา",
+    students: "นักเรียน/นักศึกษา",
     Parent: "ผู้ปกครอง",
     Teacher: "ครู-อาจารย์",
     Other: "บุคคลทั่วไป",
