@@ -5,13 +5,13 @@ export const Faq = () => {
     <>
       <div id="faq" className="section bg-juicy-100">
         <h1 className="text-center font-bold text-3xl md:text-5xl my-2 md:my-5">FAQ's</h1>
-        <div className="mx-auto w-full max-w-lg bg-white rounded-2xl md:p-6">
+        <div className="mx-auto w-full max-w-2xl bg-white rounded-2xl md:p-6">
           {allQuestion.map((q) => {
             return (
               <div class="">
                 <details class="group [&_summary::-webkit-details-marker]:hidden ">
                   <summary class="flex w-full items-center justify-between px-4 py-2 border-b-2 border-juicy-200  cursor-pointer">
-                    <h2 class="text-left text-xl font-extrabold text-black ">
+                    <h2 class="text-left text-2xl md:text-3xl font-extrabold text-black ">
                       {q.question}
                     </h2>
 
@@ -31,7 +31,7 @@ export const Faq = () => {
                     </svg>
                   </summary>
 
-                  <p class="px-4 leading-relaxed bg-white text-lg text-gray-800">
+                  <p class="px-4 mt-2 leading-relaxed bg-transparent text-xl md:text-2xl text-gray-800">
                     {q.answer}
                   </p>
                 </details>
