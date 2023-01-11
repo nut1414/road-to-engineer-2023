@@ -13,7 +13,7 @@ export const allSchedules = [
         link: 'https://forms.gle/RXFJMiGpZcse8Lbq6'
       },
       {
-        department: 'วิศวกรรมอุตสาหการกับแมคคาทรอนิกส์ (PE&MCE)',
+        department: 'วิศวกรรมอุตสาหการ (PE)',
         rounds: ['10.00 - 11.00 น.', '13.00 - 14.00 น.', '15.00 - 16.00 น.'],
         link: 'https://forms.gle/oVb8uqo7jVCiztKy8'
       },
@@ -73,7 +73,7 @@ export const allSchedules = [
         link: 'https://forms.gle/RXFJMiGpZcse8Lbq6'
       },
       {
-        department: 'วิศวกรรมอุตสาหการกับแมคคาทรอนิกส์ (PE&MCE)',
+        department: 'วิศวกรรมอุตสาหการ (PE)',
         rounds: ['10.00 - 11.00 น.', '13.00 - 14.00 น.', '15.00 - 16.00 น.'],
         link: 'https://forms.gle/oVb8uqo7jVCiztKy8'
       },
@@ -133,7 +133,7 @@ export const allSchedules = [
         link: 'https://forms.gle/RXFJMiGpZcse8Lbq6'
       },
       {
-        department: 'วิศวกรรมอุตสาหการกับแมคคาทรอนิกส์ (PE&MCE)',
+        department: 'วิศวกรรมอุตสาหการ (PE)',
         rounds: ['10.00 - 11.00 น.', '13.00 - 14.00 น.'],
         link: 'https://forms.gle/oVb8uqo7jVCiztKy8'
       },
