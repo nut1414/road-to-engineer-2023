@@ -51,6 +51,11 @@ ol li {
   list-style-position: inside;
 }
 
+ul li {
+  list-style: disc;
+  list-style-position: inside;
+}
+
 ol > li > ol > li {
   margin-left: 1.5rem;
 }
