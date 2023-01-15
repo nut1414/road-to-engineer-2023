@@ -1,6 +1,6 @@
 import { Card } from './Card'
 import { useNavigate } from 'react-router-dom'
-
+import { EditProfileModal } from './EditProfileModal'
 
 export const MiddleProfile = () => {
   const navigate = useNavigate()
@@ -35,16 +35,16 @@ export const MiddleProfile = () => {
     )
   };
 
-  const ProfileTitle = ({onClick}) => (
-      <div className="flex gap-4 cursor-pointer text-2xl sm:text-3xl" onClick={onClick}>
+  const ProfileTitle = () => (
+      <div className="flex gap-4 items-center" >
         My Account
-        <img src='/image/edit.svg' alt='edit' />
+        <EditProfileModal/>
       </div>
     )
   
   return (
     <div className="p-2 grow">
-      <Card title={<ProfileTitle onClick={()=>{alert("yay")}}/>} >
+      <Card title={<ProfileTitle />} >
         <div className="space-y-2">
           <ProfileList label="Name" text="ชื่อ สกุล" img="/image/person.svg" />
           <ProfileList label="Email" text="abc@kmutt.ac.th" img="/image/mail.svg" />
