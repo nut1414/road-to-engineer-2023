@@ -7,15 +7,21 @@ import { Email } from './input/EmailInput';
 import { Password } from './input/PasswordInput';
 import { Checkbox } from './input/CheckboxInput';
 import { Button } from "./input/Button";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 export const Login = () => {
   const { login, logout, status } = useAuth();
+  const { type, token } = useParams();
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (status == "authenticated") {
-      navigate("/announcement");
+    if (status == "authenticated") 
+    switch (type) {
+      case "form":
+          navigate("/form/" + token);
+        break;
+      default:
+          navigate("/announcement");
     }
   }, [status])
 
@@ -63,7 +69,7 @@ export const Login = () => {
             {/* <Button logo={Google} text= {` SIGN IN BY GOOGLE `} type="2" /> */}
             <span className="w-full flex justify-center text-lg text-decorate-100 space-x-1 mt-2">
               <p>Need an account? </p>
-              <a href="/register" className="hover:text-juicy-100/75 underline">SIGN UP</a>
+              <a href={type ? `/register/${type}/${token}`: "/register"} className="hover:text-juicy-100/75 underline">SIGN UP</a>
             </span>
           </div>
         </div>

@@ -11,6 +11,7 @@ import fetch from "../utils/fetchAxios";
 import { useAuth } from "../contexts/AuthContext";
 import { useNavigate } from "react-router-dom";
 import Swal from 'sweetalert2';
+import { useParams } from "react-router-dom";
 
 const StudentRegister = ({ input, setInput }) => {
   const studentGrade = {
@@ -45,6 +46,7 @@ export const BasicRegister = () => {
     educationLevel: '',
     schoolName: '',
   });
+  const { type, token } = useParams();
 
   const accType = {
     students: "นักเรียน/นักศึกษา",
@@ -83,7 +85,14 @@ export const BasicRegister = () => {
           title: 'Signed Up successfully !'
         })
         login(input.email, input.password)
-        navigate('/login');
+        switch (type){
+          case 'form':
+            navigate(`/login/form/${token}`);
+            break;
+          default:
+            navigate('/login');
+        }
+        
       })
       .catch((error) => {
         Swal.mixin({
@@ -196,7 +205,7 @@ export const BasicRegister = () => {
 
             <span className="w-full flex justify-center text-lg text-decorate-100 space-x-1 mt-2">
               <p>Already a user? </p>
-              <a href="/login" className="hover:text-juicy-100/75 underline">LOGIN</a>
+              <a href={type ? `/login/${type}/${token}` : '/login'} className="hover:text-juicy-100/75 underline">LOGIN</a>
             </span>
           </form>
         </div>
