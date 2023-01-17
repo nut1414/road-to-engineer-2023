@@ -25,7 +25,9 @@ export const AuthProvider = ({ children }) => {
         if (typeof response.data === "object" && response.data?.length > 0){
           response.data[0].educationLevel ??= "-";
           response.data[0].schoolName ??= "-"; 
-
+          if (["student", "Student", "Students"].includes(response.data[0].accountType))
+            response.data[0].accountType = "students";
+          
           const {
             name,
             email,
