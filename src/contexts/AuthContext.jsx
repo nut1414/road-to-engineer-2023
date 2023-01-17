@@ -23,15 +23,33 @@ export const AuthProvider = ({ children }) => {
       .post("/login/authentication", { email, password })
       .then((response) => {
         if (typeof response.data === "object" && response.data?.length > 0){
+          response.data[0].educationLevel ??= "-";
+          response.data[0].schoolName ??= "-"; 
+
           const {
             name,
             email,
+            phone,
+            accountType,
             _id,
-            token
+            token,
+            educationLevel,
+            schoolName,
           } = response.data[0];
+
+          const userInfo = {
+            name,
+            email,
+            phone,
+            accountType,
+            educationLevel,
+            schoolName,
+            _id,
+          };
+          
           localStorage.setItem("user", token);
-          localStorage.setItem("userinfo", encode(JSON.stringify({ name, email, _id })));
-          setUser({ name, email, _id });
+          localStorage.setItem("userinfo", encode(JSON.stringify(userInfo)));
+          setUser(userInfo);
           setStatus("authenticated");
         } else {
           setUser(null);
