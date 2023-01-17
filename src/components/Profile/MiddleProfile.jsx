@@ -1,8 +1,11 @@
 import { Card } from './Card'
 import { useNavigate } from 'react-router-dom'
 import { EditProfileModal } from './EditProfileModal'
+import { useAuth } from '../../contexts/AuthContext'
+import { useEffect } from 'preact/hooks'
 
 export const MiddleProfile = () => {
+  const { user, status, logout } = useAuth()
   const navigate = useNavigate()
 
   const ProfileList = ({ img, label, text }) => {
@@ -38,19 +41,26 @@ export const MiddleProfile = () => {
   const ProfileTitle = () => (
       <div className="flex gap-4 items-center" >
         My Account
-        <EditProfileModal/>
+        <div>
+          <EditProfileModal user={user} />
+        </div>
       </div>
     )
   
+  useEffect(() => {
+    if (status == 'authenticated') {
+    }
+  }, [status])
+  
   return (
     <div className="p-2 grow">
-      <Card title={<ProfileTitle />} >
+      {user && <Card title={<ProfileTitle />} >
         <div className="space-y-2">
-          <ProfileList label="Name" text="ชื่อ สกุล" img="/image/person.svg" />
-          <ProfileList label="Email" text="abc@kmutt.ac.th" img="/image/mail.svg" />
-          <ProfileList label="Phone" text="095-xxx-xxxx" img="/image/phone.svg" />
+          <ProfileList label="Name" text={user.name} img="/image/person.svg" />
+          <ProfileList label="Email" text={user.email} img="/image/mail.svg" />
+          <ProfileList label="Phone" text={user.phone} img="/image/phone.svg" />
         </div>
-      </Card>
+      </Card>}
       <Card title="My Activity">
         <ActivityButton img="/image/stamp.svg" text="My E-Stamp" onClick={() => navigate('/estamp')} />
       </Card>

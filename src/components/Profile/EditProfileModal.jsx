@@ -1,12 +1,14 @@
-import { useState } from "preact/hooks";
+import { useEffect, useState } from "preact/hooks";
+import { useAuth } from "../../contexts/AuthContext";
 
-export const EditProfileModal = ({ firstname, lastname, email, phone }) => {
+export const EditProfileModal = ({ user }) => {
+  const { logout } = useAuth();
   const [input, setInput] = useState({
-    firstname: "",
-    lastname: "",
-    email: "",
-    phone: "",
+    ...user, 
+    firstname: user.name.split(' ')[0],
+    lastname: user.name.split(' ')[1],
   });
+
 
   const ProfileDetail = ({ img, value, label }) => {
     return (
@@ -33,26 +35,28 @@ export const EditProfileModal = ({ firstname, lastname, email, phone }) => {
           </div>
           <div className="flex flex-col text-juicy-200 w-full">
             <h2 className="font-bold text-lg md:text-3xl">{label}</h2>
-            <TextInput name="firstname" value="chai" />
-            <TextInput name="lastname" value="mee" />
+            <TextInput name="firstname" value={input.firstname} />
+            <TextInput name="lastname" value={input.lastname}/>
           </div>
         </div>
       </>
     );
   };
 
+  const handleChange = (e) => {
+    const newState = { ...input, [e.target.id]: e.target.value }
+    setInput(newState);
+  };
+
   const TextInput = ({
     name,
     placeholder,
-    onChange,
-    input,
-    setInput,
     value,
   }) => {
     return (
       <>
         <div className="w-full z-20">
-          <label htmlFor={name} className="flex flex-col text-xl">
+          <label className="flex flex-col text-xl">
             <input
               type="text"
               id={name}
@@ -61,7 +65,7 @@ export const EditProfileModal = ({ firstname, lastname, email, phone }) => {
               onChange={handleChange}
               placeholder={placeholder}
               value={value}
-              required
+              
             />
           </label>
         </div>
@@ -69,17 +73,23 @@ export const EditProfileModal = ({ firstname, lastname, email, phone }) => {
     );
   };
 
-  const handleChange = (e) => {
-    setInput({ ...input, [e.target.id]: e.target.value });
-  };
+  
 
   const handleSubmit = () => {
-
+    console.log(input);
   };
 
   const handleReset = () => {
-
+    setInput({
+      ...user,
+      firstname: user.firstname,
+      lastname: user.lastname,
+    });
   };
+
+  useEffect(() => {console.log(input)},[input])
+
+  
   return (
     <>
       {/* The button to open modal */}
@@ -88,16 +98,16 @@ export const EditProfileModal = ({ firstname, lastname, email, phone }) => {
       </label>
 
       <input type="checkbox" id="my-modal-4" className="modal-toggle" />
-      <label htmlFor="my-modal-4" className="modal cursor-pointer">
-        <label className="modal-box relative" htmlFor="">
+      <label className="modal cursor-pointer">
+        <label className="modal-box relative">
           <div className="text-juicy-200 text-3xl lg:text-4xl font-bold tracking-wide mb-2 md:mb-5 border-b-2 border-b-juicy-200">
             Edit Account
           </div>
 
           <div className="space-y-2 m-5">
             <NameDetail label="Name" img="/image/person.svg" />
-            <ProfileDetail label="Email" value={email} img="/image/mail.svg" />
-            <ProfileDetail label="Phone" value={phone} img="/image/phone.svg" />
+            <ProfileDetail label="Email" img="/image/mail.svg" value={user.email}/>
+            <ProfileDetail label="Phone" img="/image/phone.svg" value={user.phone}/>
           </div>
 
           <div className="flex w-full gap-x-6 ">
