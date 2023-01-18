@@ -4,7 +4,7 @@ export const TopEstamp = () => {
   return (
     <div className="bg-juicy-100 text-white h-1/4">
       <div className="flex justify-between py-2">
-        <Link to="/openhouse" className="justify-center items-center">
+        <Link to="/profile" className="justify-center items-center">
           <img src="/image/backbtn.svg" alt="<" className="h-10" />
         </Link>
         <div className="flex h-fit col-span-6">
