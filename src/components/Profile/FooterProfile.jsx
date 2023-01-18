@@ -3,6 +3,7 @@ import { useAuth } from "../../contexts/AuthContext";
 
 export const FooterProfile = () => {
   const { logout } = useAuth();
+
   return (
     <div>
       <img src="/image/triangle.svg" alt="triangle" className="object-fill w-screen h-8"/>

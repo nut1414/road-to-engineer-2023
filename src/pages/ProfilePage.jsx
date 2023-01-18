@@ -1,3 +1,4 @@
+
 import { useEffect } from "preact/hooks"
 import { FooterProfile } from "../components/Profile/FooterProfile"
 import { MiddleProfile } from "../components/Profile/MiddleProfile"
