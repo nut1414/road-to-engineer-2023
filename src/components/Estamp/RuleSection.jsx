@@ -23,7 +23,7 @@ export const RuleSection = () => {
               <li className="list-outside">E-Stamp ได้จากการเข้าร่วมกิจกรรม โดยจะต้องสแกน qr-code และตอบแบบสอบถาม</li>
             <li className="list-outside">E-Stamp ซุ้มกิจกรรม ได้จากซุ้มกิจกรรมส่วนภาคและ RC ส่วนเวทีกลางจะได้จากกิจกรรมส่วนกลาง <span className="text-juicy-100 underline decoration-juicy-100/30">เท่านั้น</span>
             </li>
-            <li className="list-outside">E-Stamp พิเศษ จะได้เฉพาะผู้ที่เข้าร่วมการแข่งขันภายใต้โครงการ Road to Engineering at Bangmad <span className="text-juicy-100 underline decoration-juicy-100/30"> เท่านั้น</span>
+            <li className="list-outside">E-Stamp พิเศษ จะได้เฉพาะผู้ที่เข้าร่วมการแข่งขันภายใต้โครงการ Road to Engineering at Bangmod <span className="text-juicy-100 underline decoration-juicy-100/30"> เท่านั้น</span>
             </li>
             <li className="list-outside">E-Stamp Workshop ได้จากกิจกรรม Workshop ของแต่ละภาค</li>
           </ul>
