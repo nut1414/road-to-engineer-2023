@@ -59,3 +59,7 @@ ul li {
 ol > li > ol > li {
   margin-left: 1.5rem;
 }
+
+ul > li > ul > li {
+  margin-left: 1.5rem;
+}
