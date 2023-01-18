@@ -7,15 +7,17 @@ import { Email } from './input/EmailInput';
 import { Password } from './input/PasswordInput';
 import { Checkbox } from './input/CheckboxInput';
 import { Button } from "./input/Button";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 export const Login = () => {
   const { login, logout, status } = useAuth();
+  const { type, token } = useParams();
   const navigate = useNavigate();
 
   useEffect(() => {
     if (status == "authenticated") {
-      navigate("/announcement");
+      if(type) navigate("/"+type+"/"+(token ? token : ""));
+      else navigate("/profile");
     }
   }, [status])
 
@@ -33,7 +35,7 @@ export const Login = () => {
   return (
     <>
       <div className="relative flex flex-col w-screen h-screen bg-juicy-200 overflow-x-hidden md:overflow-hidden">
-        <div className="flex lg:absolute w-full p-2 my-5 lg:p-16 h-fit lg:h-full justify-center lg:justify-start items-start z-10">
+        <div className="flex lg:absolute w-full p-2 my-5 pt-10 lg:p-16 h-fit lg:h-full justify-center lg:justify-start items-start z-10">
           <img src={Logo} alt="" className="h-full lg:h-1/3 object-contain object-center scale-75 lg:scale-90" />
         </div>
         <div className="fixed md:px-5 pt-16 m-0 w-screen h-screen flex justify-start items-end z-0">
@@ -63,7 +65,7 @@ export const Login = () => {
             {/* <Button logo={Google} text= {` SIGN IN BY GOOGLE `} type="2" /> */}
             <span className="w-full flex justify-center text-lg text-decorate-100 space-x-1 mt-2">
               <p>Need an account? </p>
-              <a href="/register" className="hover:text-juicy-100/75 underline">SIGN UP</a>
+              <a href={type ? `/register/${type}/${token}`: "/register"} className="hover:text-juicy-100/75 underline">SIGN UP</a>
             </span>
           </div>
         </div>
